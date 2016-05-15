@@ -1,0 +1,13 @@
+{{ partial "header_before.html" . }}
+{{ partial "header_after.html" . }}
+
+<div class="container" style="padding-top: 80px">
+  <article class="single">
+    <div class="body">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+
+{{ partial "footer.html" . }}

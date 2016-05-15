@@ -1,0 +1,44 @@
+
+
+<hr class="soften" style="clear: both">
+
+<footer class="l-footer">
+  <div class="container">
+    <p>{{ with .Site.Copyright | safeHTML }}{{ . }}{{ else }}&copy; {{ $.Site.LastChange.Year }} {{ if isset $.Site.Params "Author" }}{{ $.Site.Params.Author }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}
+    Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a>, 
+    Theme <a href="https://github.com/justinoverton/hugo_metroui_theme" target="_blank" rel="nofollow">Metro</a> 
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript" src="{{ .Site.BaseURL }}js/metro.js"></script>
+<script type="text/javascript" src="{{ .Site.BaseURL }}js/theme.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  $(function() {
+
+    var gridster = $(".tile-container").gridster({
+      widget_margins: [10, 10],
+      widget_base_dimensions: [140, 140],
+      min_rows: 1,
+      min_cols: 4,
+      max_size_x: 2
+    }).data('gridster');
+        
+  });
+</script>
+
+{{ with .Site.Params.GoogleAnalyticsUserID }}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '{{ . }}', 'auto');
+ga('send', 'pageview');
+</script>
+{{ end }}
+  </body>
+</html>

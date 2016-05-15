@@ -1,0 +1,9 @@
+<article class="fg-dark padding30">
+  <div>
+      <h2 class="no-margin-top"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <hr class="bg-red">
+      <div>
+          {{ with .Params.summary }}{{ . }}{{ end }}
+      </div>
+  </div>
+</article>

@@ -1,0 +1,17 @@
+name = "Hugo_MetroUI"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = "Metro theme for hugo."
+tags = ["blog", "website"]
+features = ["blog", "website"]
+min_version = 0.15
+
+[author]
+    name = "Justin Overton"
+    homepage = "http://polymath.ninja/"
+
+# If porting an existing theme
+[original]
+  name = "Robust"
+  homepage = "https://github.com/dim0627/hugo_theme_robust"
+  repo = "https://github.com/dim0627/hugo_theme_robust"

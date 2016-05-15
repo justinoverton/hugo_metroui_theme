@@ -1,0 +1,33 @@
+
+{{ partial "header_before.html" . }}
+{{ partial "header_after.html" . }}
+
+  <div class="bg-lightBlue fg-white align-center">
+      <div class="container">
+          <div class="no-overflow" style="padding-top: 40px; padding-bottom: 40px">
+
+              <h1 class="leader text-shadow metro-title text-light">{{ .Site.Title }}</h1>
+              {{ with .Site.Params.subTitle }}
+              <div class="padding30 sub-leader text-light">
+                  {{ . | safeHTML }}
+              </div>
+              {{ end }}
+          </div>
+      </div>
+  </div>
+  
+  <div class="container">
+      {{ range (where .Data.Pages "Section" "!=" "").GroupBy "Section" }}
+        <h3>{{ .Key }}</h3>
+        <div class="tile-container">
+          {{ range first 10 .Pages.ByDate.Reverse }}
+            {{ .Render "grid" }}
+          {{ end }}
+        </div>
+      {{ end }}
+      
+      {{ partial "pagination.html" . }}
+
+  </div>
+
+{{ partial "footer.html" . }}

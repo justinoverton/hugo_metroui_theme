@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {{ .Hugo.Generator }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}img/favicon.png" />
+
+		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro.css" />
+		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro-icons.css" />
+		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro-responsive.css" />
+		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/site.css" />
+		
+    {{ if .RSSlink }}
+      <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{ if eq .URL "/" }}
+    <title>{{ .Title }}</title>
+    {{ else }}
+    <title>{{ .Title | singularize }} - {{ .Site.Title }}</title>
+    {{ end }}
+
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Params.image }}<meta property="og:image" content="{{ $.Site.BaseURL }}images/{{ . }}">{{ end }}
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery.min.js"></script>

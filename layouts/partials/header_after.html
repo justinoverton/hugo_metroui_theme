@@ -1,0 +1,36 @@
+</head>
+
+<body>
+  <div class="app-bar fixed-top" data-role="appbar">
+    <div class="container">
+      <a class="app-bar-element" href="{{ .Site.BaseURL }}">
+        <img src="{{ .Site.BaseURL }}img/logo.png" class="drop-logo" />
+      </a>
+      <a class="app-bar-element" href="{{ .Site.BaseURL }}">
+        {{ .Site.Title }}
+      </a>
+      <span class="app-bar-divider"></span>
+      
+        
+        {{ if ne (len .Site.Menus) 0 }}
+            {{ range .Site.Menus }}
+            <ul class="app-bar-menu">
+              {{ range . }}
+              <li>
+                {{ if .HasChildren }}
+                <a href="#" class="dropdown-toggle">{{ .Pre }} {{ .Name }}</a>
+                <ul class="d-menu" data-role="dropdown">
+                  {{ range .Children }}
+                  <li class="sub"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                  {{ end }}
+                </ul>
+              </li>
+              {{ else }}
+              <li><a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a></li>
+              {{ end }}
+              {{end}}
+            </ul>
+            {{end}}
+          {{ end }}
+    </div>
+  </div>

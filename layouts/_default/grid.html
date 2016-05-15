@@ -1,0 +1,24 @@
+
+  <a href="{{ .Permalink }}">    
+    <div class="
+        {{ with .Params.tile_size }}{{ . }}{{else}}tile{{ end }}
+        {{ with .Params.tile_bg_color }}{{ . }}{{else}}bg-emerald{{ end }}
+        {{ with .Params.tile_fg_color }}{{ . }}{{else}}fg-white{{ end }}
+    "    
+    data-role="tile">
+        <div class="tile-content {{ with .Params.summary }}slide-up{{ end }}" >
+            {{ if or (isset .Params "image") (isset .Params "summary") }}
+                <div class="slide">
+                    {{ if isset .Params "image" }}
+                    <img  src="{{ $.Site.BaseURL }}img/{{ .Params.image }}" data-role="fitImage" data-format="{{ with .Params.tile_img_format }}{{ . }}{{ else }}fill{{ end }}" />
+                    {{ end }}
+                </div>
+                <div class="slide-over {{ with .Params.tile_slide_over_class }}{{ . }}{{ end }}">
+                    {{ with .Params.summary }}{{ . }}{{ end }}
+                </div>
+            {{ end }}
+            <span class="tile-label {{ with .Params.title_class }}{{ . }}{{ end }}">{{ .Title }}</span>
+        </div>
+    </div>
+    
+  </a>
