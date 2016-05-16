@@ -1,0 +1,9 @@
+<!--TODO:
+Add data parameters from here: http://metroui.org.ua/carousel.html
+-->
+<div class="carousel" style='
+    height: {{ with .Get "height" }}{{ . }}{{ else }}100px{{ end }};
+    width: {{ with .Get "width" }}{{ . }}{{ else }}100%{{ end }};
+' data-role="carousel">
+    {{ .Inner }}
+</div>

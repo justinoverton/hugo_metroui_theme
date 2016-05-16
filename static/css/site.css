@@ -15,3 +15,150 @@
 .slide {
     height: 100%;
 }
+
+#TableOfContents a {
+  display: block;
+}
+
+#TableOfContents ul ul a {
+  text-decoration: none;
+}
+
+#TableOfContents>ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#TableOfContents>ul ul {
+  padding-left: 0;
+  font-weight: normal;
+  list-style: none;
+}
+
+#TableOfContents>ul ul ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.table-of-contents {
+  float: right;
+  padding: 1rem;
+}
+
+/*
+custom scheme for toc
+*/
+.table-of-contents.darcula {
+  background: #3c3f41;
+}
+.table-of-contents.darcula li > a {
+  background: #3c3f41;
+  color: #ffffff;
+}
+.table-of-contents.darcula li:hover > a {
+  background: #4d5154;
+  color: #ffffff;
+}
+.table-of-contents.darcula li.active > a {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+.table-of-contents.darcula li.disabled > a {
+  background: #3c3f41;
+  color: #555555;
+}
+.table-of-contents.pink {
+  background: #dc4fad;
+}
+.table-of-contents.pink li > a {
+  background: #dc4fad;
+  color: #ffffff;
+}
+.table-of-contents.pink li:hover > a {
+  background: #b91a6c;
+  color: #ffffff;
+}
+.table-of-contents.pink li.active > a {
+  background: #9a165a;
+  color: #ffffff;
+}
+.table-of-contents.pink li.disabled > a {
+  background: #dc4fad;
+  color: #555555;
+}
+.table-of-contents.navy {
+  background: #0072c6;
+}
+.table-of-contents.navy li > a {
+  background: #0072c6;
+  color: #ffffff;
+}
+.table-of-contents.navy li:hover > a {
+  background: #006aba;
+  color: #ffffff;
+}
+.table-of-contents.navy li.active > a {
+  background: #005696;
+  color: #ffffff;
+}
+.table-of-contents.navy li.disabled > a {
+  background: #0072c6;
+  color: #555555;
+}
+.table-of-contents.red {
+  background: #ce352c;
+}
+.table-of-contents.red li > a {
+  background: #ce352c;
+  color: #ffffff;
+}
+.table-of-contents.red li:hover > a {
+  background: #b91a1a;
+  color: #ffffff;
+}
+.table-of-contents.red li.active > a {
+  background: #9a1616;
+  color: #ffffff;
+}
+.table-of-contents.red li.disabled > a {
+  background: #ce352c;
+  color: #555555;
+}
+.table-of-contents.green {
+  background: #60a917;
+}
+.table-of-contents.green li > a {
+  background: #60a917;
+  color: #ffffff;
+}
+.table-of-contents.green li:hover > a {
+  background: #169f2c;
+  color: #ffffff;
+}
+.table-of-contents.green li.active > a {
+  background: #128023;
+  color: #ffffff;
+}
+.table-of-contents.green li.disabled > a {
+  background: #60a917;
+  color: #555555;
+}
+.table-of-contents.orange {
+  background: #fa6800;
+}
+.table-of-contents.orange li > a {
+  background: #fa6800;
+  color: #ffffff;
+}
+.table-of-contents.orange li:hover > a {
+  background: #df6919;
+  color: #ffffff;
+}
+.table-of-contents.orange li.active > a {
+  background: #bf5a15;
+  color: #ffffff;
+}
+.table-of-contents.orange li.disabled > a {
+  background: #fa6800;
+  color: #555555;
+}

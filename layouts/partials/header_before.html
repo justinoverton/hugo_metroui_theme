@@ -5,11 +5,12 @@
     {{ .Hugo.Generator }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}img/favicon.png" />
-
+    
 		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro.css" />
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro-schemes.css" />
 		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro-icons.css" />
 		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro-responsive.css" />
-		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/site.css" />
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/site.css" />
 		
     {{ if .RSSlink }}
       <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />

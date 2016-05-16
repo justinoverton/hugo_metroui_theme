@@ -17,17 +17,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
-  $(function() {
-
-    var gridster = $(".tile-container").gridster({
-      widget_margins: [10, 10],
-      widget_base_dimensions: [140, 140],
-      min_rows: 1,
-      min_cols: 4,
-      max_size_x: 2
-    }).data('gridster');
-        
-  });
 </script>
 
 {{ with .Site.Params.GoogleAnalyticsUserID }}

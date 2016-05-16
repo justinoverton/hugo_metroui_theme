@@ -1,11 +1,25 @@
 {{ partial "header_before.html" . }}
 {{ partial "header_after.html" . }}
 
-<div class="container" style="padding-top: 80px">
+<div>
   <article class="single">
     <div class="body">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
+      <div class="bg-lightBlue fg-white align-center">
+          <div class="container">
+              <div class="no-overflow" style="padding-top: 40px; padding-bottom: 40px">
+
+                  <h1 class="leader text-shadow metro-title text-light">{{ .Title }}</h1>
+                  
+              </div>
+          </div>
+      </div>
+            
+      <div class="container">
+        {{ if gt (len .TableOfContents) 500 }}
+        <div class="table-of-contents {{ with .Site.Params.metroscheme }}{{ . }}{{ else }}navy{{ end }}">{{ .TableOfContents }}</div>
+        {{ end }}
+        {{ .Content }}
+      </div>
     </div>
   </article>
 </div>
